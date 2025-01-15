@@ -6,7 +6,7 @@ I am an entry-level Data/Business Intelligence Analyst with a strong foundation 
 
 # About Me
 
-I have a passion for transforming raw data into meaningful insights. My academic background, combined with hands-on experience, has equipped me with a solid understanding of various data analysis tools and methodologies. I am proficient in Python, SQL, and Power BI, and I am continually seeking to expand my skill set.
+I have a passion for transforming raw data into meaningful insights. My academic background, combined with hands-on experience, has equipped me with a solid understanding of various data analysis tools and methodologies. I am proficient in Python, SQL, Power BI, and Tableau and I am continually seeking to expand my skill set.
 
 # Projects
 
@@ -14,9 +14,11 @@ In this repository, you will find several projects demonstrating my abilities in
 
 # Skills and Technologies
 
+- Excel: Proficient in data analysis using Excel, including PivotTables, Power Query, advanced formulas, and Data Analysis Toolpak for statistical and financial modeling.
+- Power BI: Interactive dashboards and business intelligence reporting.
 - Python: Data manipulation, analysis, and visualization.
 - SQL: Database querying and management.
-- Power BI: Interactive dashboards and business intelligence reporting.
+- Tableau: Advanced data visualization, interactive dashboards, and storyboards to communicate insights effectively.
 
 # How to Use This Portfolio
 
