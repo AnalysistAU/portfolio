@@ -71,9 +71,8 @@ The Power BI relationship modeling tools were used to link the dimension and fac
 
 ## Power BI Demo
 
-Please refer to the short dashboard video below. Click to link to watch the video.
-[![Screenshot 2025-01-14 114319](![image](https://github.com/user-attachments/assets/d91f3e83-699c-410f-a962-8328fea8dd21)
-)](https://youtu.be/XY9UMDeZFFs)
+Please check out the short dashboard video below. Click to view.
+[![Screenshot 2025-01-16 202149](https://github.com/user-attachments/assets/28d5bdb8-425b-4dc6-b894-39ca4ebf55df)](https://youtu.be/XY9UMDeZFFs)
 
 ---
 
@@ -81,3 +80,9 @@ Please refer to the short dashboard video below. Click to link to watch the vide
 
 Through the ETL and data preprocessing tasks, FuelWatch data was integrated, cleaned, and loaded into Power BI. The final step was designing a star schema to provide a scalable foundation for future data expansion.
 
+---
+
+## Report
+
+This is a simple report created to support understanding of the dashboard. Please refer to it.
+[Click here](https://docs.google.com/document/d/1_viERX0QsKA43bGf0JxpMtPUY31gd2Jr/edit?usp=sharing&ouid=110905777482363304127&rtpof=true&sd=true)
