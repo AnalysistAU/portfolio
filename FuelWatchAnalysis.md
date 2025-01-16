@@ -1,3 +1,7 @@
+# ➡️ [Published Power BI Dashboard](https://app.powerbi.com/links/gZK2dAiE6g?ctid=5a740cd7-5768-4d09-ae13-f706b09fa22c&pbi_source=linkShare)
+
+---
+
 # ETL and Data Preprocessing Workflow
 
 ## 1. Extraction: Downloading Data from FuelWatch
@@ -14,7 +18,7 @@
 
 To process multiple CSV files, a Python script was used to merge data by year:
 
-'''python
+```python
 import pandas as pd
 import glob
 
@@ -26,8 +30,7 @@ all_data = pd.concat([pd.read_csv(file) for file in file_paths])
 
 # Save the merged data
 all_data.to_csv("C:/path_to_output/merged_data_2023.csv", index=False)
-'''
-
+```
 ---
 
 ## 3. Transformation: Data Cleaning and Preprocessing
@@ -68,14 +71,13 @@ The Power BI relationship modeling tools were used to link the dimension and fac
 
 ## Power BI Demo
 
-This video shows how to record and analyze reports in Power BI.
-
-[[Power BI Demo Video]()](https://youtu.be/Qq9YQl6V4Ak)
-
-*Click the image above to watch the Power BI demonstration on YouTube!*
+Please refer to the short dashboard video below. Click to link to watch the video.
+[![Screenshot 2025-01-14 114319](![image](https://github.com/user-attachments/assets/d91f3e83-699c-410f-a962-8328fea8dd21)
+)](https://youtu.be/XY9UMDeZFFs)
 
 ---
+
 ## Summary
 
 Through the ETL and data preprocessing tasks, FuelWatch data was integrated, cleaned, and loaded into Power BI. The final step was designing a star schema to provide a scalable foundation for future data expansion.
-'''
+
