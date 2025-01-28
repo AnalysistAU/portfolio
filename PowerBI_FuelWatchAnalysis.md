@@ -35,14 +35,73 @@ all_data.to_csv("C:/path_to_output/merged_data_2023.csv", index=False)
 
 ## 3. Transformation: Data Cleaning and Preprocessing
 
-Preprocessing tasks were performed to improve data quality in the merged dataset:
+Data cleaning and preprocessing tasks were performed to enhance the quality of the merged dataset. The key steps include:  
 
-- **Remove unnecessary columns**: Removed irrelevant columns (e.g., "Unnamed: 10").
-- **Standardize date formats**: Converted the 'PUBLISH_DATE' column to the standard datetime format.
-- **Handle missing values**: Removed rows containing Null values to ensure data integrity.
-- **Optimize data types**: Assigned appropriate data types (e.g., 'POSTCODE' as int32, 'PRODUCT_PRICE' as float32) to reduce memory usage.
+###  1) Remove Unnecessary Columns 
+Unrelated or redundant columns were removed to optimize the dataset size and improve processing efficiency.  
 
-Additional tasks included removing duplicate data and filtering based on dates to enhance data refinement.
+- Dropped non-essential columns such as **"Unnamed: 10"** and other metadata fields.  
+- Retained only one representative column for redundant information.  
+
+**Python Code**  
+```python
+df.drop(columns=['Unnamed: 10', 'Metadata_ID', 'Redundant_Column'], inplace=True)
+```
+---
+
+###  2) Standardize Date Formats 
+Date values were standardized to maintain consistency and ensure accurate analysis and visualization.  
+
+- Converted **'PUBLISH_DATE'** to a uniform datetime format (`YYYY-MM-DD`).  
+- Handled multiple formats (e.g., `MM/DD/YYYY`, `YYYY.MM.DD`) using `pd.to_datetime()`.  
+
+**Python Code**  
+```python
+df['PUBLISH_DATE'] = pd.to_datetime(df['PUBLISH_DATE'], errors='coerce')
+```  
+---
+
+###  3) Handle Missing Values  
+Missing values were addressed to maintain **data integrity** and prevent potential issues during analysis.  
+
+- Essential columns (e.g., `Customer_ID`, `Product_Name`) with missing values were **dropped**.  
+- Numerical fields (e.g., `PRODUCT_PRICE`) had missing values filled with the **median or mean** to preserve statistical consistency.  
+
+**Python Code**  
+```python
+# Replace missing categorical values with 'Unknown'
+df['Product_Category'].fillna('Unknown', inplace=True)
+
+# Fill missing numerical values with the median
+df['PRODUCT_PRICE'] = df['PRODUCT_PRICE'].fillna(df['PRODUCT_PRICE'].median())
+```
+---
+
+###  4) Optimize Data Types
+Proper data types were assigned to enhance memory efficiency and improve processing speed.  
+
+- Converted `POSTCODE` to `int32` and `PRODUCT_PRICE` to `float32` to reduce memory usage.  
+- Used `astype()` for type conversion.  
+
+**Python Code**  
+```python
+df['POSTCODE'] = df['POSTCODE'].astype('int32')
+df['PRODUCT_PRICE'] = df['PRODUCT_PRICE'].astype('float32')
+```
+---
+
+###  5) Remove Duplicate Records
+Duplicate entries were identified and removed to ensure data accuracy.  
+
+- Checked for duplicates across key columns and **dropped them while keeping the first occurrence**.  
+
+**Python Code**  
+```python
+df.drop_duplicates(subset=['Customer_ID', 'Order_ID'], keep='first', inplace=True)
+```
+---
+
+By implementing these data cleaning and preprocessing steps, the dataset was refined for more efficient and accurate analysis.
 
 ---
 
